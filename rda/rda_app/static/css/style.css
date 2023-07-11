@@ -1,0 +1,49 @@
+@media screen and (max-width: 1025px) {
+    .img_1 {
+        width: 50%;
+        margin: auto;
+        align-items: center;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: smaller;
+    }
+
+    .w3-card-4 {
+        margin-bottom: 5%;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .img_1 {
+        width: 50%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-items: center;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .w3-card-4 {
+        margin: 3%;
+    }
+
+    .dropdown-item {
+        font-size: 12px;
+    }
+}
+
+.w3-card-4 {
+    margin: 3%;
+}
+
+#contenedor {
+    height: 100%;
+}

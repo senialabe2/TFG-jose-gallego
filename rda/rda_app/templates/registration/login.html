@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/css/mdb.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Include your login.css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+
+    <title>SmartCampus IoT</title>
+    {% block head %}
+    {% endblock %}
+</head>
+
+
+<body>
+    <div class="body">
+        <div class="container1 mx-auto">
+            <div id="contenedor">
+                <img id="img_1" class="mb-4"
+                    src="https://www.aulavirtual.urjc.es/moodle/theme/image.php/urjc/theme/1634191125/logo_URJC" alt="">
+            </div>
+
+        </div>
+        <div class="container2 mx-auto">
+            <div class="text-center">
+                <div id="contenedor" class="wrapper fadeInDown ">
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <p style="color: red; margin-top: 8%;">
+                            Usuario:
+                        <p style="margin-left: 20%; margin-right: 20%; background-color: #ffffff;">{{ form.username }}</p>
+                        </p>
+                        <p style="color: red;">
+                            Contraseña:
+                        <p style="margin-left: 20%; margin-right: 20%; background-color: #ffffff;">{{ form.password }}</p>
+                        </p>
+                        {% if form.errors %}
+                        <p class="alert alert-danger center-block red" role="alert"
+                            style="width: 80%; margin-left: auto; margin-right: auto;">
+                            Usuario o contraseña erróneos
+                        </p>
+                        {% endif %}
+                        {% for error in form.password.errors %}
+                        <p class="alert alert-danger center-block" role="alert"
+                            style="width: 80%; margin-left: auto; margin-right: auto;">
+                            Some field is missing.
+                        </p>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary btn-sm red">Login</button>
+                        <input type="hidden" name="next" value="{{ next }}">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="header">
+            <div id="text_h">
+                <h1 style="color: #ffffff;">Reserva de aulas</h1>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

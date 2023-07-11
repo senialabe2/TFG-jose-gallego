@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    {{ block.super }} 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/aulario.css' %}">
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="w3-row w3-center" id="contenedor">
+    {% include '2_3_contenido.html' %}
+    <div class="w3-third" style="height: 100%;" id="section2">
+      <div class="w3-card w3-container">
+        <h3 id="header-text" style="color:black;">Aulario 1 Campus de Fuenlabrada</h3>
+
+        <div style="display: flex; justify-content: center;">
+          <a class="fas fa-arrow-alt-circle-left fa-4x" style="margin-right: 20px; margin-top: 2%; margin-bottom: 2%;" href="/"></a>
+          <a class="fas fa-home fa-4x" style="margin-top: 2%; margin-bottom: 2%;" href="/"></a>
+        </div>
+        
+
+        <img src="{{img_aulario}}" alt="Imagen del Edificio" style="width: 75%; height: auto; margin-bottom: 40px">
+
+        <div class="w3-container w3-light-grey w3-margin-top" style="font-size: 1.3em;">
+          <h4>Horario del Edificio</h4>
+          <p>Abierto de Lunes a Viernes de 7:00 AM a 10:00 PM</p>
+        </div>
+
+        <div class="w3-container w3-light-grey w3-margin-top" style="font-size: 1.3em;">
+          <h4>Información de Contacto</h4>
+          <p>Administrador del edificio: Juan Pérez</p>
+          <p>Email: j.perez@urjc.es</p>
+        </div>
+
+        <div class="w3-container w3-light-grey w3-margin-top" style="font-size: 1.3em;">
+          <h4>Recordatorios Importantes</h4>
+          <p>Inicio de semestre: 11 de septiembre</p>
+          <p>Fin de semestre: 22 de diciembre</p>
+          <p>Periodo de exámenes: 8 de enero - 22 de enero</p>
+        </div>
+
+        <div class="w3-container w3-light-grey w3-margin-top" style="font-size: 1.3em;">
+          <h4>Reglas de Reserva de Aulas</h4>
+          <p>Las aulas deben reservarse con al menos 48 horas de anticipación.</p>
+          <p>Los profesores pueden reservar hasta 10 horas a la semana.</p>
+          <p>Para cancelar una reserva, por favor contactar a la administración con al menos 24 horas de anticipación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/scripts.js' %}"></script>
+{% endblock %}

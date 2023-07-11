@@ -1,0 +1,108 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+@media screen and (max-width: 1025px) {
+    .container1 {
+        height: 100%;
+        width: 90%;
+        margin-top: 30%;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 5px;
+        background-color: transparent;
+    }
+
+    .container2 {
+        height: 35%;
+        width: 100%;
+        margin-top: 40%;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 5px;
+        background-color: #444343;
+    }
+
+    .btn {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    #text_h {
+        text-align: left;
+        margin-top: 70%;
+    }
+
+    h1 {
+        font-size: 180%;
+    }
+
+    #img_1 {
+        margin-top: 10px;
+        margin-left: -10px;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container1 {
+        height: 100%;
+        width: 135%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 5px;
+        background-color: transparent;
+        margin-top: 100px;
+    }
+
+    .container2 {
+        height: 100%;
+        width: 100%;
+        margin-top: 17%;
+        margin-bottom: 10%;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 5px;
+        background-color: #444343;
+    }
+
+    .btn {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    #text_h {
+        position: relative;
+        text-align: left;
+        margin-top: 450px;
+        left: 850px;
+    }
+
+    h1 {
+        font-size: 350%;
+    }
+
+    #img_1 {
+        margin-top: 10px;
+        margin-left: -20px;
+        height: 80%;
+        width: 80%;
+    }
+}

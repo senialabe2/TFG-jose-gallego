@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="w3-row-padding w3-center w3-margin-top" id="contenedor">
+    
+    <!-- Campus de Móstoles -->
+    <div class="w3-third">
+        <div class="w3-card-4">
+            <header class="w3-container w3-light-grey">
+                <h3>Campus de Móstoles</h3>
+            </header>
+            <img title="Campus de Móstoles" alt="Campus de Móstoles" class="img_1" src="{% static 'media/mostoles.jpg' %}">
+            <BR>
+            <!-- Dropdown Menu -->
+            <div class="w3-container w3-center">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-red dropdown-toggle " data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                        Selecciona edificio:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <!-- Dropdown Items -->
+                        <a class="dropdown-item" href="/#">Edificio rectorado</a>
+                        <a class="dropdown-item" href="/#">Edificio ampliación de rectorado</a>
+                        <a class="dropdown-item" href="/#">Biblioteca</a>
+                        <a class="dropdown-item" href="/#">Gestión</a>
+                        <a class="dropdown-item" href="/#">Centro de apoyo tecnológico</a>
+                        <a class="dropdown-item" href="/#">Departamental I</a>
+                        <a class="dropdown-item" href="/#">Departamental II</a>
+                        <a class="dropdown-item" href="/Mostoles_Aulario">Aulario I</a>
+                        <a class="dropdown-item" href="/#">Laboratorio I</a>
+                        <a class="dropdown-item" href="/#">Aulario II</a>
+                        <a class="dropdown-item" href="/#">Laboratorio II</a>
+                        <a class="dropdown-item" href="/#">Aulario III</a>
+                        <a class="dropdown-item" href="/#">Laboratorio III</a>
+                        <a class="dropdown-item" href="/#">Sala de Servidores</a>
+                    </div>
+                </div>
+            </div>
+            <BR>
+        </div>
+    </div>
+
+    <!-- Campus de Fuenlabrada -->
+    <div class="w3-third" style="height: 45%;">
+        <div class="w3-card-4">
+            <header class="w3-container w3-light-grey">
+                <h3>Campus de Fuenlabrada</h3>
+            </header>
+            <img title="Campus de Fuenlabrada" alt="Campus de Fuenlabrada" class="img_1" src="{% static 'media/fuenlabrada.jpg' %}">
+            <BR>
+            <div class="w3-container w3-center">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-red dropdown-toggle " data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Selecciona edificio:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <!-- <a class="dropdown-item" href="#">Salón de actos</a> -->
+                        <a class="dropdown-item" href="/#">Biblioteca</a>
+                        <a class="dropdown-item" href="/#">Gestión</a>
+                        <!-- <a class="dropdown-item" href="#">Instalaciones deportivas</a> -->
+                        <!-- <a class="dropdown-item" href="#">Edificio de restauración</a> -->
+                        <a class="dropdown-item" href="/#">Departamental I</a>
+                        <a class="dropdown-item" href="/#">Departamental III</a>
+                        <a class="dropdown-item" href="/Aulario_Fuenlabrada">Aulario I</a>
+                        <a class="dropdown-item" href="/#">Laboratorio I</a>
+                        <a class="dropdown-item" href="/#">Aulario II</a>
+                        <a class="dropdown-item" href="/#">Laboratorio II</a>
+                        <a class="dropdown-item" href="/#">Aulario III</a>
+                        <a class="dropdown-item" href="/#">Laboratorio III</a>
+                        <a class="dropdown-item" href="/#">Aulario IV</a>
+                    </div>
+                </div>
+            </div>
+            <BR>
+        </div>
+    </div>
+
+    <!-- Campus de Alcorcon -->
+    <div class="w3-third" style="height: 45%;">
+        <div class="w3-card-4">
+            <header class="w3-container w3-light-grey">
+                <h3>Campus de Alcorcón</h3>
+            </header>
+            <img title="Campus de Alcorcón" alt="Campus de Alcorcón" class="img_1" src="{% static 'media/alcorcon.jpg' %}">
+            <BR>
+            <div class="w3-container w3-center">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-red dropdown-toggle " data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Selecciona edificio:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="/#">Biblioteca</a>
+                        <a class="dropdown-item" href="/#">Gestión</a>
+                        <a class="dropdown-item" href="/#">Instalaciones deportivas</a>
+                        <a class="dropdown-item" href="/#">Edificio de restauración</a>
+                        <a class="dropdown-item" href="/#">Departamental I</a>
+                        <a class="dropdown-item" href="/#">Departamental II</a>
+                        <a class="dropdown-item" href="/#">Aulario I</a>
+                        <a class="dropdown-item" href="/#">Aulario II</a>
+                        <a class="dropdown-item" href="/#">Laboratorios Polivalentes</a>
+                    </div>
+                </div>
+            </div>
+            <BR>
+        </div>
+    </div>
+
+    <!-- Campus de Vicálvaro -->
+    <div class="w3-third" style="height: 45%;">
+        <div class="w3-card-4">
+            <header class="w3-container w3-light-grey">
+                <h3>Campus de Vicalvaro</h3>
+            </header>
+            <img title="Campus de Vicálvaro" alt="Campus de Vicálvaro" class="img_1" src="{% static 'media/vicalvaro.jpg' %}">
+            <BR>
+            <div class="w3-container w3-center">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-red dropdown-toggle " data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Selecciona edificio:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="/#">Aulario</a>
+                        <a class="dropdown-item" href="/#">Biblioteca</a>
+                        <a class="dropdown-item" href="/#">Departamental</a>
+                        <a class="dropdown-item" href="/#">Edificio de restauración</a>
+                        <a class="dropdown-item" href="/#">Gestión</a>
+                    </div>
+                </div>
+            </div>
+            <BR>
+        </div>
+    </div>
+
+    <!-- Campus de Aranjuez -->
+    <div class="w3-third" style="height: 45%;">
+        <div class="w3-card-4">
+            <header class="w3-container w3-light-grey">
+                <h3>Campus de Aranjuez</h3>
+            </header>
+            <img title="Campus de Aranjuez" alt="Campus de Aranjuez" class="img_1" src="{% static 'media/aranjuez.jpg' %}">
+            <BR>
+            <div class="w3-container w3-center">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-red dropdown-toggle " data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Selecciona edificio:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="/#">Aulario</a>
+                        <a class="dropdown-item" href="/#">Casa del Gobernador</a>
+                        <a class="dropdown-item" href="/#">Antiguo Cuartel de Pavia</a>
+                        <a class="dropdown-item" href="/#">Edificio Maestro Rodrigo</a>
+                    </div>
+                </div>
+            </div>
+            <BR>
+        </div>
+    </div>
+</div>
+{% endblock %}
